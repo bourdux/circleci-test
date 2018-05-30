@@ -6,13 +6,13 @@ jobs:
       - image: circleci/python:2-jessie
     steps:
       - checkout
-      - run: echo "Hello World"
+      - run: echo "hello world"
   test:
     docker:
       - image: circleci/python:2-jessie
     steps:
       - checkout
-      - run: echo "Hello World"
+      - run: echo "hello world"
 
 workflows:
   version: 2
@@ -20,5 +20,5 @@ workflows:
     jobs:
       - build
       - test:
-        requires:
-          - build
+          requires:
+            - build
